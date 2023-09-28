@@ -1,13 +1,13 @@
 const MathBasic = require('./MathBasic');
 
 describe('A MathBasic', () => {
-  it('should contains add, substract, multiply, and devide function', () => {
+  it('should contains add, subtract, multiply, and devide function', () => {
     expect(MathBasic).toHaveProperty('add');
-    expect(MathBasic).toHaveProperty('substract');
+    expect(MathBasic).toHaveProperty('subtract');
     expect(MathBasic).toHaveProperty('multiply');
     expect(MathBasic).toHaveProperty('divide');
     expect(MathBasic.add).toBeInstanceOf(Function);
-    expect(MathBasic.substract).toBeInstanceOf(Function);
+    expect(MathBasic.subtract).toBeInstanceOf(Function);
     expect(MathBasic.multiply).toBeInstanceOf(Function);
     expect(MathBasic.divide).toBeInstanceOf(Function);
   });
@@ -31,22 +31,22 @@ describe('A MathBasic', () => {
     });
   });
 
-  describe('A substract function', () => {
+  describe('A subtract function', () => {
     it('should throw error when not given 2 parameters', () => {
-      expect(() => MathBasic.substract()).toThrowError();
-      expect(() => MathBasic.substract(1)).toThrowError();
-      expect(() => MathBasic.substract(1, 2, 3)).toThrowError();
-      expect(() => MathBasic.substract(1, 2, 3, 4)).toThrowError();
+      expect(() => MathBasic.subtract()).toThrowError();
+      expect(() => MathBasic.subtract(1)).toThrowError();
+      expect(() => MathBasic.subtract(1, 2, 3)).toThrowError();
+      expect(() => MathBasic.subtract(1, 2, 3, 4)).toThrowError();
     });
     it('should throw error when given non-number parameters', () => {
-      expect(() => MathBasic.substract('1', '2')).toThrowError();
-      expect(() => MathBasic.substract(true, {})).toThrowError();
-      expect(() => MathBasic.substract(null, false)).toThrowError();
+      expect(() => MathBasic.subtract('1', '2')).toThrowError();
+      expect(() => MathBasic.subtract(true, {})).toThrowError();
+      expect(() => MathBasic.subtract(null, false)).toThrowError();
     });
     it('should return a - b when given two number parameters', () => {
-      expect(MathBasic.substract(2, 2)).toEqual(0);
-      expect(MathBasic.substract(16, 8)).toEqual(8);
-      expect(MathBasic.substract(3, 7)).toEqual(-4);
+      expect(MathBasic.subtract(2, 2)).toEqual(0);
+      expect(MathBasic.subtract(16, 8)).toEqual(8);
+      expect(MathBasic.subtract(3, 7)).toEqual(-4);
     });
   });
 
